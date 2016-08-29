@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.kheireddineben.maptest.MapsActivity" />
+    <RelativeLayout
+        android:id="@+id/Video"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:gravity="bottom|right"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_gravity="right|bottom">
+        <fragment
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:id="@+id/VideoFragment"
+            android:name="com.example.kheireddineben.maptest.Video"
+            tools:layout="@layout/fragment_video"
+            android:gravity="right"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp">
+        </fragment>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;"
+            android:id="@+id/button2"
+            android:layout_alignBottom="@+id/VideoFragment"
+            android:layout_alignRight="@+id/VideoFragment"
+            android:layout_alignEnd="@+id/VideoFragment" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/Chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top|right"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_gravity="right|top">
+        <fragment
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:id="@+id/ChatFragment"
+            android:name="com.example.kheireddineben.maptest.Chat"
+            tools:layout="@layout/fragment_chat"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp">
+        </fragment>
+
+    </RelativeLayout>
+
+</FrameLayout>
